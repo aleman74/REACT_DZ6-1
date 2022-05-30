@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './Watch.css';
 import {nanoid} from "nanoid";
 import WatchList from "./WatchList";
-
 
 
 class Watch extends React.Component{
@@ -38,10 +36,7 @@ class Watch extends React.Component{
     }
 
     onDelete = (id) => {
-        console.log('onDelete id = ' + id);
-
-        let arr = this.state.data.filter(item => item.id != id);
-        this.setState( prev => ({data: arr}));
+        this.setState( prev => ({data: prev.data.filter(item => item.id !== id)}));
     }
 
     changeName(evt) {

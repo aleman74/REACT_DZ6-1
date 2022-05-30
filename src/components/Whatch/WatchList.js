@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import WatchItem from "./WatchItem";
-
 
 
 class WatchList extends React.Component{
